@@ -1,11 +1,9 @@
-number = int(input("Введіть 4-значне число: "))
+number = int(input("Введіть 5-значне число: "))
 
-a = number // 1000
-b = number % 1000 // 100
-c = number % 100 // 10
-d = number % 10 // 1
+a = number // 10000
+b = number % 10000 // 1000
+c = number % 1000 // 100
+d = number % 100 // 10
+e = number % 10 // 1
 
-print(a)
-print(b)
-print(c)
-print(d)
+print(e * 10000 + d * 1000 + c * 100 + b * 10 + a)
