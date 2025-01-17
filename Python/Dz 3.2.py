@@ -1,9 +1,10 @@
-number = int(input("Введіть 5-значне число: "))
-
-a = number // 10000
-b = number % 10000 // 1000
-c = number % 1000 // 100
-d = number % 100 // 10
-e = number % 10 // 1
-
-print(e * 10000 + d * 1000 + c * 100 + b * 10 + a)
+# lst = [12, 3, 4, 10]
+# my_lst = [lst[-1]] + lst[:-1]
+# print(my_lst)
+# lst = [1]
+# my_lst = [lst[-1]] + lst[:-1]
+# print(my_lst)
+lst = []
+my_lst = [lst[-1]] + lst[:-1]
+print(my_lst)
+# [12, 3, 4, 10, 8] => [8, 12, 3, 4, 10
