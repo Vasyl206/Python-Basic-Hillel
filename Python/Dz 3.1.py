@@ -1,23 +1,14 @@
-print("Впишіть що ви хоите зробити")
-print("Додати '+'")
-print("Відняти '-'")
-print("Помножити '*'")
-print("Розділити '/'")
-action = input("Введіть вашу дію: ")
-first_number = int(input("Введіть перше число: "))
-second_number = int(input("Введіть друге число: "))
+#lst = [0, 1, 0, 12, 3]
 
-if action == "+":
-    print(first_number + second_number)
-elif action == "-":
-    print(first_number - second_number)
-elif action == "*":
-    print(first_number * second_number)
-elif action == "/":
-    if first_number == 0 or second_number == 0:
-        print("Не правильне введення числа(На 0 не ділеться )")
-    else:
-        print(first_number / second_number)
-else:
-    print("Невірна дія")
+#lst = [0]
 
+#lst = [1, 0, 13, 0, 0, 0, 5]
+
+#lst = [9, 0, 7, 31, 0, 45, 0, 45, 0, 45, 0, 0, 96, 0]
+
+if 0 in lst:
+    for _ in range(lst.count(0)):
+        lst.remove(0)
+        lst.append(0)
+
+print(lst)
