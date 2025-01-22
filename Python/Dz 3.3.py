@@ -1,13 +1,15 @@
-#lst = [1, 2, 3, 4, 5, 6]
+import random
 
-#lst = [1, 2, 3]
+list_length = random.randint(3, 10)
 
-#lst = [1, 2, 3, 4, 5]
+lst = []
+for _ in range(list_length):
+    lst.append(random.randint(1, 100))
 
-#lst = [1]
+t1 = lst[0]
+t2 = lst[2]
+t3 = lst[-2]
 
-#lst = []
-
-my_lst = (len(lst) + 1) // 2
-my_super_lst = [lst[:my_lst], lst[my_lst:]]
-print(my_super_lst)
+lst_2 = [t1, t2, t3]
+print(lst_2)
+print(lst)
