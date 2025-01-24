@@ -1,15 +1,14 @@
-import random
+import string
 
-list_length = random.randint(3, 10)
+print("Напишіть рядок для '#'")
+wor = input(": ")
 
-lst = []
-for _ in range(list_length):
-    lst.append(random.randint(1, 100))
+wor_1 = wor.title()
 
-t1 = lst[0]
-t2 = lst[2]
-t3 = lst[-2]
+wor_2 = wor_1.replace(" ","")
 
-lst_2 = [t1, t2, t3]
-print(lst_2)
-print(lst)
+wor_3 = wor_2.translate(str.maketrans("", "", string.punctuation))
+
+wor_4 = "#" + wor_3
+
+print(wor_4)
