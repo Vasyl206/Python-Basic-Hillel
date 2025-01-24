@@ -1,14 +1,27 @@
-#lst = [0, 1, 0, 12, 3]
 
-#lst = [0]
+# _ => True
+# __ => False
+# ___ => False
+# x => True
+# get_value => True
+# get value => False
+# get!value => False
+# some_super_puper_value => True
+# Get_value => False
+# get_Value => False
+# getValue => False
+# 3m => False
+# m3 => True
+# assert => False
+# assert_exception => True
 
-#lst = [1, 0, 13, 0, 0, 0, 5]
 
-#lst = [9, 0, 7, 31, 0, 45, 0, 45, 0, 45, 0, 0, 96, 0]
+print("Перевірка чи може цей рядок бути ім'ям змінної")
+world = input("Введіть рядок: ")
 
-if 0 in lst:
-    for _ in range(lst.count(0)):
-        lst.remove(0)
-        lst.append(0)
+if "_" in world:
+    print(world, "може пути змінною")
+elif "__" or "___" in world:
+    print("Це слово не може бути ім'ям змінної")
 
-print(lst)
+
