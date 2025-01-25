@@ -1,27 +1,28 @@
-
-# _ => True
-# __ => False
-# ___ => False
-# x => True
-# get_value => True
-# get value => False
-# get!value => False
-# some_super_puper_value => True
-# Get_value => False
-# get_Value => False
-# getValue => False
-# 3m => False
-# m3 => True
-# assert => False
-# assert_exception => True
+import keyword
+import string
 
 
-print("Перевірка чи може цей рядок бути ім'ям змінної")
-world = input("Введіть рядок: ")
+def is_valid_variable(name):
+    if name in keyword.kwlist:
+        return False
 
-if "_" in world:
-    print(world, "може пути змінною")
-elif "__" or "___" in world:
-    print("Це слово не може бути ім'ям змінної")
+    if ' ' in name:
+        return False
+
+    if name[0].isdigit():
+        return False
+
+    if any(char.isupper() for char in name):
+        return False
+
+    if any(char in string.punctuation for char in name) and "_" not in name:
+        return False
+
+    if name.count('_') > 1:
+        return False
+
+    return True
 
 
+name = input("Введіть ім'я змінної: ")
+print(is_valid_variable(name))
