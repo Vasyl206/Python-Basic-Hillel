@@ -1,14 +1,11 @@
-import string
+import keyword
 
-print("Напишіть рядок для '#'")
-wor = input(": ")
+wor = "dsf"
+wor_2 = keyword.kwlist
 
-wor_1 = wor.title()
+if wor in wor_2:
+    print(False)
 
-wor_2 = wor_1.replace(" ","")
+print(wor)
 
-wor_3 = wor_2.translate(str.maketrans("", "", string.punctuation))
 
-wor_4 = "#" + wor_3
-
-print(wor_4)
