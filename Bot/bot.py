@@ -1,9 +1,12 @@
 import telebot
 
-bot = telebot.TeleBot('8093831394:AAFl7Zs1GzyRiUVWrAbC7AaQIrUSKUQkZcQ')
+token = "8093831394:AAFl7Zs1GzyRiUVWrAbC7AaQIrUSKUQkZcQ"
 
-@bot.message_handler(commands=["start"])
-def main(message):
-    bot.send_message(message.chat.id, "Hellow")
+bot=telebot.TeleBot(token)
+@bot.message_handler(commands=['start'])#Декоратор @bot.message_handler(commands=['...']) связывает команду, введённую пользователем, с определённой функцией, которая обрабатывает эту команду.
+def start_message(message):#Это функуия с названием start_message с параметром message
+  bot.send_message(message.chat.id,"Привет ✌️ ")#Команда, которая отправляет сообщение пользователю.
+bot.infinity_polling()
+@bot.message_handler(commands=["button"])
+def button_message(message):
 
-bot.polling(non_stop=True)
