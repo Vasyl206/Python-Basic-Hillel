@@ -1,31 +1,18 @@
+seconds = int(input("Введіть число від 0 і до 8640000: "))
 
-while True:
-        print("Впишіть що ви хоите зробити")
-        print("Додати '+'")
-        print("Відняти '-'")
-        print("Помножити '*'")
-        print("Розділити '/'")
-        action = input("Введіть вашу дію: ")
-        first_number = int(input("Введіть перше число: "))
-        second_number = int(input("Введіть друге число: "))
+minut, sec = divmod(seconds, 60)
+hour, minut = divmod(minut, 60)
+day, hour = divmod(hour, 24)
+
+if day % 10 == 1 and day % 100 != 11:
+    day_str = f"{day} день"
+elif 2 <= day % 10 <= 4 and (day % 100 < 10 or day % 100 >= 20):
+    day_str = f"{day} дні"
+else:
+    day_str = f"{day} днів"
+
+print(f"{day_str} {hour:02}:{minut:02}:{sec:02}")
 
 
-        if action == "+":
-            print(first_number + second_number)
-        elif action == "-":
-            print(first_number - second_number)
-        elif action == "*":
-            print(first_number * second_number)
-        elif action == "/":
-            if first_number == 0 or second_number == 0:
-                print("Не правильне введення числа(На 0 не ділеться )")
-            else:
-                print(first_number / second_number)
-        else:
-            print("Невірна дія")
-        continue_calculation = input("Продовжити роботу? (y/yes для продовження, інше для виходу): ")
-        if continue_calculation not in ("y", "yes"):
-            print("Дякую за використання калькулятора!")
-            break
 
 
