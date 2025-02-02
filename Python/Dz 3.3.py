@@ -1,12 +1,10 @@
-num = input("Введіть число: ")
+num = int(input("Введіть число: "))
 
-lst = num_1 = num[0:1]
-lst_2 = num_2 = num[1:2]
-lst_3 = num_3 = num[2:3]
+while num > 9:
+    product = 1
+    for digit in str(num):  # Розбиваємо число на цифри
+        product *= int(digit)  # Перемножуємо всі цифри
+    num = product  # Оновлюємо число новим значенням
 
-
-
-print(num_1)
-print(num_2)
-print(num_3)
+print(num)  # Виводимо остаточний результат
 
