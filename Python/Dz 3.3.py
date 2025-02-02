@@ -1,11 +1,12 @@
-import keyword
+num = input("Введіть число: ")
 
-wor = "dsf"
-wor_2 = keyword.kwlist
+lst = num_1 = num[0:1]
+lst_2 = num_2 = num[1:2]
+lst_3 = num_3 = num[2:3]
 
-if wor in wor_2:
-    print(False)
 
-print(wor)
 
+print(num_1)
+print(num_2)
+print(num_3)
 

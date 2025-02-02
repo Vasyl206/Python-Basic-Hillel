@@ -1,15 +1,8 @@
-import string
 
-ferst_letter = input("Введіть букву: ")
-sacond_letter = input("Ведіть букву: ")
 
-letters = string.ascii_letters
+def say_hi(name, age):
+    return f"Hi. My name is {name} and I'm {age} years old"
 
-letter_1 = letters.index(ferst_letter)
-letter_2 = letters.index(sacond_letter)
+print(say_hi("Valya", 23))
 
-if letter_1 <= letter_2:
-    print(letters[letter_1:letter_2 + 1])
-else:
-    print(letters[letter_2:letter_1 + 1])
 
