@@ -1,10 +1,9 @@
-num = int(input("Введіть число: "))
 
-while num > 9:
-    product = 1
-    for digit in str(num):  # Розбиваємо число на цифри
-        product *= int(digit)  # Перемножуємо всі цифри
-    num = product  # Оновлюємо число новим значенням
+def second_index(text, some_str):
+    first = text.find(some_str)
+    if first == -1:
+        return None
 
-print(num)  # Виводимо остаточний результат
-
+    second = text.find(some_str, first + 1)
+    return second if second != -1 else None
+print(second_index("find the river", "e"))
