@@ -1,7 +1,6 @@
-from collections import Counter
+names = [1, 2, 3, 4, 5]
+star = 0
 
-text = "hello world hello python world python hello"
-words = text.split()  # Разбиваем текст на слова
-word_count = Counter(words)
+for name in names:
+    star += name
 
-print(word_count)
