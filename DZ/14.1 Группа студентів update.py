@@ -1,4 +1,4 @@
-class GroupOverflowError:
+class GroupOverflowError(Exception):
     def __init__(self, message="Не можна додавати більше 10 студентів в групу"):
         self.message = message
         super().__init__(self.message)
