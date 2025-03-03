@@ -25,10 +25,7 @@ class Purchase:
         self.user = user
 
     def add_item(self, item, cnt):
-        if item in self.products:
-            self.products[item] += cnt
-        else:
-            self.products[item] = cnt
+        self.products[item] = cnt
 
     def get_total(self):
         return sum(item.price * cnt for item, cnt in self.products.items())
@@ -38,9 +35,8 @@ class Purchase:
         return f"User: {self.user}\nItems:\n{items_str}"
 
 
-# Тестирование
-lemon = Item("lemon", 5, "yellow", "small")
-apple = Item("apple", 2, "red", "middle")
+lemon = Item('lemon', 5, "yellow", "small", )
+apple = Item('apple', 2, "red", "middle", )
 print(lemon)  # lemon, price: 5
 
 buyer = User("Ivan", "Ivanov", "02628162")
@@ -50,11 +46,22 @@ cart = Purchase(buyer)
 cart.add_item(lemon, 4)
 cart.add_item(apple, 20)
 print(cart)
-
-assert isinstance(cart.user, User) is True, "Екземпляр класу User"
+"""
+User: Ivan Ivanov
+Items:
+lemon: 4 pcs.
+apple: 20 pcs.
+"""
+assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
 assert cart.get_total() == 60, "Всього 60"
-assert cart.get_total() == 60, "Повинно залишатися 60!"
-
+assert cart.get_total() == 60, 'Повинно залишатися 60!'
 cart.add_item(apple, 10)
 print(cart)
-assert cart.get_total() == 80, "Всього 80"  # Updated to 80
+"""
+User: Ivan Ivanov
+Items:
+lemon: 4 pcs.
+apple: 10 pcs.
+"""
+
+assert cart.get_total() == 40
