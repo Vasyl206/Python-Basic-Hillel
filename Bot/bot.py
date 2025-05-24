@@ -1,6 +1,6 @@
 import telebot
 
-token = "8093831394:AAFl7Zs1GzyRiUVWrAbC7AaQIrUSKUQkZcQ"
+token = ""
 
 bot=telebot.TeleBot(token)
 @bot.message_handler(commands=['start'])#Декоратор @bot.message_handler(commands=['...']) связывает команду, введённую пользователем, с определённой функцией, которая обрабатывает эту команду.
